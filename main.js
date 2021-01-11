@@ -5,11 +5,23 @@ const path = require('path')
 const os = require('os')
 var win;
 
+autoUpdater.on("update-not-available", function() {
+  alert("na");
+})
+autoUpdater.on("checking-for-update", function() {
+  alert("cu");
+})
+autoUpdater.on("update-available", function() {
+  alert("ua");
+})
 app.on('ready', function()  {
   autoUpdater.checkForUpdatesAndNotify();
+  autoUpdater.on("error", function(e) {
+    alert(e.message);
+  });
+  updateAppData();
+  alert("test2");
 });
-
-updateAppData();
 
 function createWindow () {
   win = new BrowserWindow({
@@ -64,6 +76,10 @@ function updateAppData() {
   if (!fs.existsSync(directoryPath)) {
     fs.mkdirSync(directoryPath);
   }
+  fs.readdir(".", function(e, files) {
+    //alert(files.join(", "));
+  })
+  //alert(fs.existsSync(path.join(app.getAppPath(), "orig")).toString());
   var files = ["data.txt", "favoritelinks.txt", "schedule.json", "weeklydata.json"];
   files.forEach(doUpdateFileIfNotExists);
 }
@@ -104,3 +120,7 @@ autoUpdater.on('error', message => {
   console.error(message)
 })
 */
+
+function alert(msg) {
+  dialog.showMessageBoxSync({message:msg});
+}
