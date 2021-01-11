@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Add Rule - Samurai Sam's</title>
+        <script src="../../shiftutils.js"></script>
+        <script src="../weeklyutils.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>Add Rule</h1>
+        <select id="ruleType" onchange="doUpdateForm()">
+            <option disabled selected>Select a schedule type...</option>
+            <option value="add">Schedule</option>
+            <option value="remove">Do not schedule</option>
+        </select><br>
+        <span id="employeeSelectContainer" hidden><select id="employeeSelect" onchange="doUpdateForm()">
+            <option disabled selected>Select an employee...</option>
+        </select><br>
+        Day: <select id="startDaySelect">
+            <option value="0">Monday</option>
+            <option value="1">Tuesday</option>
+            <option value="2">Wednesday</option>
+            <option value="3">Thursday</option>
+            <option value="4">Friday</option>
+            <option value="5">Saturday</option>
+            <option value="6">Sunday</option>
+        </select><br>
+        From: <select id="startHour">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>:
+        <select id="startMinute">
+            <option value="00">00</option>
+            <option value="05">05</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+        </select> 
+        <select id="startAPM">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+        </select><br>
+        To: <select id="endHour">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>:
+        <select id="endMinute">
+            <option value="00">00</option>
+            <option value="05">05</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+        </select> 
+        <select id="endAPM">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+        </select>
+        <br></span>
+        <span id="shiftSelectContainer" hidden><select id="shiftSelect" onchange="doUpdateForm()">
+            <option disabled selected>Select a shift...</option>
+        </select><br></span>
+        <span id="timeSelectContainer" hidden>
+            Starting on day: <input type="date" id="daySelect" onchange="doUpdateForm()" /><br>
+        </span>
+        <span id="lengthSelectContainer" hidden>
+            <input type="radio" name="lengthTypeSelect" id="weeks" onchange="doUpdateForm()" /><label for="weeks">For <input type="number" value="1" onclick="weeks.checked=true" id="weekInput" /> week(s)</label><br>
+            <input type="radio" name="lengthTypeSelect" id="indefinitely" onchange="doUpdateForm()" /><label for="indefinitely">Indefinitely</label><br>
+        </span><br>
+        <button onclick="save()" disabled id="saveButton">Save</button>
+        <button onclick="cancel()">Cancel</button>
+    </body>
+</html>

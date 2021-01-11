@@ -1,0 +1,45 @@
+.weekSelectArrow {
+    cursor: pointer;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+table {
+    border-collapse: collapse;
+}
+thead {
+    border: 2px solid;
+}
+td, th {
+    padding: 10px 10px;
+    position: relative;
+}
+
+.addButton {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    right: 5;
+    bottom: 0;
+}
+.addButton:hover {
+    background-color: lightgray;
+}
+
+.shiftText, .employeeName {
+    cursor: pointer;
+}
+
+.shiftText:hover, .employeeName:hover {
+    text-decoration: underline;
+}
+
+.currentDay {
+    background-color: gray;
+}
+
+.payWeekEnd {
+    background-color: lightgreen;
+}

@@ -1,0 +1,30 @@
+weeklydata.json: {
+    weekly: Array<WeeklyShift>,
+    exceptions: Array<WeeklyException>
+}
+
+WeeklyShift: {
+    employee: String,
+    day: Integer(0=monday, 6=sunday)
+    start: TimeArray,
+    end: TimeArray
+}
+
+
+WeeklyException: {
+    type: String(add/remove),
+    shift: WeeklyShift,
+    startDate: DateArray,
+    weeks: Integer/-1(infinity)
+}
+
+TimeArray: [
+    hour: Integer (0-24),
+    minute: Integer (0-59)
+]
+
+DateArray: [
+    month: Integer (0-11),
+    date: Integer (1-31),
+    year: Integer (4 digits)
+]

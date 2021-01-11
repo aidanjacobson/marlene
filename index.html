@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Samurai Sam's - Home</title>
+        <script src="schedule/shiftutils.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="center">
+            <h1>Hello, Marlene!</h1>
+            <div class="section" id="links">
+                <h2>Helpful items:</h2>
+                <a href="information/index.html"><div class="linkcard"><span>Links</span></div></a>
+                <a href="schedule/index.html"><div class="linkcard"><span>Schedule</span></div></a>
+            </div><br>
+            <div class="section">
+                <h2 class="pointer" onclick="doFavToggle()">Favorite Links (click to toggle) <span id="arrowFacing">&#9660;</span></h2><br>
+                <div id="favLinks" class="expanded"></div>
+            </div><br>
+            <div class="section">
+                <h2>Today's Schedule</h2>
+                <ul id="schedule"></ul>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Weekly Schedule - Samurai Sam's</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="../shiftutils.js"></script>
+        <script src="weeklyutils.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <a href="#" onclick="goBack(event)">&lt;-- Back</a>
+        <h1>Weekly Schedule</h1>
+        <h2>Shifts</h2>
+        <ul id="shiftsDisplay"></ul>
+        <button onclick="addShift()">Add Shift</button>
+        <h2>Rules</h2>
+        <p>Use this section to temporarily update a shift (e.g. if someone has time off)</p>
+        <ul id="rulesDisplay"></ul>
+        <button onclick="addRule()">Add Rule</button>
+    </body>
+</html>

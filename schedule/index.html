@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Samurai Sam's - Schedule</title>
+        <script src="script.js"></script>
+        <script src="shiftutils.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <a href="../index.html" id="backbutton">&lt;-- Back</a>
+        <h1 style="text-align: center" id="header">Schedule for Samurai Sam's</h1>
+        <div id="content">
+            <h2 id="weekSelect">Week of: <span class="weekSelectArrow" onclick="weekBack()">&#9664;</span> <span id="weekDisplay">Placeholder Text</span> <span class="weekSelectArrow" onclick="weekForward()">&#9654;</span></h2>
+            <p id="info">Use the arrows to select the week. Press "+" to create a new shift. Click a shift to modify or remove it. Click a name to see that employee's shifts.</p>
+            <table>
+                <thead id="thead">
+                    <tr>
+                        <th>Employee</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table><br><br>
+            <div id="buttons">
+                <div id="weekly">
+                    <button onclick="fillWeeklySchedule()">Autofill weekly schedule for current week</button>
+                    <button onclick="viewWeeklySchedule()">View weekly schedule and rules</button>
+                </div>
+                <br>
+                <button onclick="print1Week()" id="print1">Print This Week</button>
+                <button onclick="printPayWeek()" id="print2">Print Pay Week</button>
+            </div>
+    </body>
+</html>

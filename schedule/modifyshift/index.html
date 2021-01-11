@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Modify / Add Shift</title>
+        <script src="../shiftutils.js"></script>
+        <script src="modifyshifts.js"></script>
+    </head>
+    <body>
+        <a href="#inapp" onclick="back(event)">&lt;-- Back</a>
+        <h1>Modify / Add Shift</h1>
+        Employee:
+        <select id="employeeSelect" onchange="processChange()"></select><br>
+        Date: <input type="date" id="dateInput" onchange="processChange()" /><br>
+        Start: <select id="startHour" onchange="processChange()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select> : 
+        <select id="startMinute" onchange="processChange()">
+            <option value="00">00</option>
+            <option value="05">05</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+        </select> 
+        <select id="startAPM" onchange="processChange()">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+        </select><br>
+        End: <select id="endHour" onchange="processChange()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select> : 
+        <select id="endMinute" onchange="processChange()">
+            <option value="00">00</option>
+            <option value="05">05</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+        </select> 
+        <select id="endAPM" onchange="processChange()">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+        </select><br><br>
+        <button onclick="save()" id="saveButton">Save</button>
+        <button onclick="cancel()">Cancel</button>
+        <button onclick="deleteShift()" disabled id="deleteButton">Delete</button><br>
+        <p id="unsavedMessage" hidden>There are unsaved changes to this shift.</p>
+    </body>
+</html>

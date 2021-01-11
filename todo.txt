@@ -1,0 +1,13 @@
+Import/Export Data (advanced page?)
+Fix printing
+Add/Remove Employees
+    If week offset < -4, do not allow modifying
+    Remove employee: removes from employee list, but shifts are still visible
+    Implement shift archival system
+Google calendar integration
+Schedule hour viewing default week
+Fix Texting
+    Ask if not on current day
+Implement Assistant
+
+Current LOC count: 2206 lines over 30 files (12/29/2020 @ 1:41 PM)

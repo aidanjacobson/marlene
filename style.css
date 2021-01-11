@@ -1,0 +1,53 @@
+.center {
+    text-align: center;
+}
+
+.linkcard {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: lightgray;
+    font-size: x-large;
+    font-weight: bolder;
+    color: black;
+}
+
+#schedule {
+    list-style-type: none;
+}
+
+.favLinkCard {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    margin: 2px;
+    background-color: lightgray;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.noExpand {
+    display: none;
+}
+
+.expanded {
+    display: initial;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.section {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    display: inline-block;
+    width: 30%;
+}

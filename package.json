@@ -1,0 +1,41 @@
+{
+  "name": "samurai-sams",
+  "version": "1.0.0",
+  "description": "Information Hub for Samurai Sam's",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron start",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "publish": "electron-builder -p always"
+  },
+  "keywords": [],
+  "author": "Aidan Jacobson",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-builder": "^22.9.1",
+    "electron-packager": "^15.2.0"
+  },
+  "dependencies": {
+    "update-electron-app": "^2.0.1",
+    "electron-updater": "^4.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aidanjacobson/marlene.git"
+  },
+  "build": {
+    "appId": "com.aidan.samuraisams",
+    "win": {
+      "target": "nsis"
+    },
+    "electronVersion": "11.1.1",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "aidanjacobson",
+        "repo": "marlene"
+      }
+    ]
+  }
+}

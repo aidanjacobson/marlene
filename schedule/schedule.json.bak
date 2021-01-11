@@ -1,0 +1,36 @@
+{
+    "employees": [
+        "Magda",
+        "Rafael",
+        "Jeff",
+        "Aidan",
+        "Annabella",
+        "Sam",
+        "Kenny",
+        "Alex"
+    ],
+    "shifts": [
+        {
+            "employee": "Aidan",
+            "date": [11, 21, 2020],
+            "start": [16, 30],
+            "end": [21, 15]
+        },
+        {
+            "employee": "Aidan",
+            "date": [11, 21, 2020],
+            "start": [11, 0],
+            "end": [16, 0]
+        },
+        {
+            "employee": "Jeff",
+            "date": [11, 21, 2020],
+            "start": [11, 0],
+            "end": [16, 0]
+        }
+    ],
+    "archives": {
+        "archiveStartDate": [10, 21, 2020],
+        "archived": []
+    }
+}

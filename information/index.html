@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Samurai Sam's - Links</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+        <script src="getdata.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <a href="../index.html" id="backbtn">&lt;-- Back</a>
+        <h1 style="text-align: center;">Links for Samurai Sam's</h1>
+        <div id="searchbox">
+            <span>Search: </span>
+            <input type="text" id="search" style="text-align: center" placeholder="(showing all)" />
+        </div><br>
+        <div id="cards">
+        </div>
+        <div id="overlay" hidden></div>
+        <div id="popup" hidden>
+            <div class="favoriteSelect">
+                <input type="checkbox" id="favorite" name="favorite" onchange="doUpdateFavorite()" />
+                <label for="favorite">Mark as favorite</label>
+            </div>
+            <h1 style="text-align: center;" id="popupTitle"></h1>
+            <p style="text-align: center;" id="popupDesc"></p>
+            <div id="fields"></div>
+            <br>
+            <div id="externals"></div>
+            <a id="closer" href="#">Close</a>
+        </div>
+        <div id="askpass" hidden>
+            <form action="#" id="form1" method="GET">
+                <h1>Enter password</h1>
+                <input type="password" id="pass" /><br><br>
+                <input type="submit" id="passsubmit" value="Submit" /><br><br>
+                <span id="state"></span>
+            </form>
+        </div>
+    </body>
+</html>

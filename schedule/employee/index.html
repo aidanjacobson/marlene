@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Samurai Sam's - Shifts</title>
+        <script src="script.js"></script>
+        <script src="../shiftutils.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <a href="../index.html">&lt;-- Back</a>
+        <h1 id="header">Shifts for</h1>
+        Presets: <button onclick="setPayWeek()">Pay Week</button><button onclick="setThisWeek()">This Week</button><br>
+        Start Date: <input type="date" id="startDateInput" onchange="updateShiftList()" /><br>
+        End Date: <input type="date" id="endDateInput" onchange="updateShiftList()" /><br><br>
+        Total: <span id="total">0 hours</span><br>
+        <ul id="shiftList"></ul><br>
+        <button onclick="text()">Text these hours</button><br>
+        <div id="qrholder" hidden>
+            <span>Scan this qr code with your phone to create a text message.</span><br>
+            <img id="qr" /><br><br>
+            <p>Message preview:</p>
+            <p id="preview"></p>
+        </div>
+    </body>
+</html>

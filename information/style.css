@@ -1,0 +1,97 @@
+.card {
+    border: 1px solid;
+    border-radius: 10px;
+    width: 30%;
+    display: inline-block;
+    cursor: pointer;
+    margin: 2px;
+}
+
+#overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.75;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: black;
+}
+
+.card > h2 {
+    text-align: center;
+}
+
+.card > p {
+    text-align: center;
+}
+
+#popup {
+    border: 5px solid;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    background-color: white;
+    z-index: 11;
+    padding: 50px;
+}
+
+#askpass {
+    border: 5px solid;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    background-color: white;
+    z-index: 11;
+    text-align: center;
+}
+#pass {
+    text-align: center;
+    font-size: 32px;
+    width: 50%;
+    letter-spacing: 10px;
+}
+#passsubmit {
+    width: 20%;
+    background-color: #eeeeee;
+    font-size: 32px;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#closer {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+}
+
+a:visited {
+    color: blue;
+}
+
+#searchbox {
+    text-align: center;
+}
+
+#favoriteSelect {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+#backbtn {
+    position: fixed;
+    z-index: 12;
+}
+
+#backbtn.behind {
+    z-index: 9 !important;
+}
