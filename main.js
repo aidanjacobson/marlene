@@ -4,23 +4,12 @@ const fs = require("fs");
 const path = require('path')
 const os = require('os')
 var win;
-
-autoUpdater.on("update-not-available", function() {
-  alert("na");
-})
-autoUpdater.on("checking-for-update", function() {
-  alert("cu");
-})
-autoUpdater.on("update-available", function() {
-  alert("ua");
-})
 app.on('ready', function()  {
   autoUpdater.checkForUpdatesAndNotify();
   autoUpdater.on("error", function(e) {
     alert(e.message);
   });
   updateAppData();
-  alert("test2");
 });
 
 function createWindow () {
