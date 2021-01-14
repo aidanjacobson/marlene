@@ -8,7 +8,7 @@
     <body>
         <a href="../index.html">&lt;-- Back</a>
         <h1 id="header">Shifts for</h1>
-        Presets: <button onclick="setPayWeek()">Pay Week</button><button onclick="setThisWeek()">This Week</button><br>
+        Presets: <button onclick="setPayWeek()">Current Pay Period</button><button onclick="setThisWeek()">This Week</button><button onclick="setLastPayWeek()">Last Pay Period</button><button onclick="setLastWeek()">Last Week</button><br>
         Start Date: <input type="date" id="startDateInput" onchange="updateShiftList()" /><br>
         End Date: <input type="date" id="endDateInput" onchange="updateShiftList()" /><br><br>
         Total: <span id="total">0 hours</span><br>

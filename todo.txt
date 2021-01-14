@@ -10,4 +10,4 @@ Fix Texting
     Ask if not on current day
 Implement Assistant
 
-Current LOC count: 2206 lines over 30 files (12/29/2020 @ 1:41 PM)
+Current LOC count: 2334 lines over 31 files (12/29/2020 @ 1:41 PM)

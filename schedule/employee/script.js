@@ -71,6 +71,28 @@ function setThisWeek() {
     updateShiftList();
 }
 
+function setLastPayWeek() {
+    var today = new Date();
+    var weekNum = get2WeekNumber(today);
+    var tempStartingDate = addDaysToDate(getPreviousMonday(today), -weekNum*7)
+    var tempEndingDate = addDaysToDate(tempStartingDate, 13);
+    tempStartingDate = addDaysToDate(tempStartingDate, -14);
+    tempEndingDate = addDaysToDate(tempEndingDate, -14);
+    startDateInput.value = formatDateForInput(tempStartingDate);
+    endDateInput.value = formatDateForInput(tempEndingDate);
+    updateShiftList();
+}
+function setLastWeek() {
+    var today = new Date();
+    var tempStartingDate = getPreviousMonday(today);
+    var tempEndingDate = addDaysToDate(tempStartingDate, 6);
+    tempStartingDate = addDaysToDate(tempStartingDate, -7);
+    tempEndingDate = addDaysToDate(tempEndingDate, -7);
+    startDateInput.value = formatDateForInput(tempStartingDate);
+    endDateInput.value = formatDateForInput(tempEndingDate);
+    updateShiftList();
+}
+
 function text() {
     var hours = [];
     for(var i = 0; i < shifts.length; i++) {
